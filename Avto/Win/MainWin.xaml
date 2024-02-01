@@ -42,5 +42,11 @@
             Text="Записи"
             Style="{StaticResource WhiteText}"
             />
+        <TextBlock
+            x:Name="Contacts"
+            Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"
+            Text="Контакты"
+            Style="{StaticResource WhiteText}"
+            />
     </Grid>
 </Window>

@@ -39,5 +39,15 @@
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="FontWeight" Value="Black"/>
         <Setter Property="Foreground" Value="WhiteSmoke"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!--Кликабельный текст-->
+    <Style x:Key="HoverText" TargetType="TextBlock">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Blue"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

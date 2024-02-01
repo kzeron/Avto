@@ -8,8 +8,10 @@
         Title="Services" Height="450" Width="800">
     <Grid>
         <TextBlock MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
-                   Text="Авторизация">
-            
+                   FontSize="19"
+                   Height="30" Width="120"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Text="Авторизация" Style="{StaticResource HoverText}">
         </TextBlock>
         <Rectangle Height="400" Width="400">
             <Rectangle.Fill>
@@ -19,6 +21,9 @@
                     <GradientStop Offset="0.2" Color="WhiteSmoke"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
+            <Rectangle.Effect>
+                <BlurEffect Radius="14"/>
+            </Rectangle.Effect>
         </Rectangle>
     </Grid>
 </Window>
