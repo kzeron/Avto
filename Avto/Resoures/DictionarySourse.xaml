@@ -15,6 +15,7 @@
             </Setter.Value>
         </Setter>
         <Setter Property="Foreground" Value="WhiteSmoke"/>
+        <Setter Property="FontStretch" Value="SemiCondensed"/>
     </Style>
     
     <!--Текстбокс-->
@@ -32,5 +33,11 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <!--Текст-->
+    <Style x:Key="WhiteText" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontWeight" Value="Black"/>
+        <Setter Property="Foreground" Value="WhiteSmoke"/>
     </Style>
 </ResourceDictionary>

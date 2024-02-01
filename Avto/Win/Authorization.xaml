@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto"
         mc:Ignorable="d"
-        Title="Авторизация" Height="650" Width="900">
+        Title="Авторизация" Height="800" Width="1040" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -24,17 +24,48 @@
         <Button x:Name="Enter" 
                 Style="{StaticResource RoundedButtonStyle}"
                 Content="Войти" Width="150" Height="50"
-                HorizontalAlignment="Center" VerticalAlignment="Top"
+                FontSize="27" FontWeight="SemiBold"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
                 Grid.Column="2" Grid.Row="3" 
                 
                 Click="Enter_Click"/>
-        <TextBox x:Name="login"
+        <TextBlock
+            x:Name="LoginText"
+            Text="Логин"
+            Grid.Column="1" Grid.Row="2"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin=" 0 35 80 0"
+            FontSize="20"
+            FontWeight="Black"
+            />
+        <TextBlock
+            x:Name="PasswordText"
+            Text="Пароль"
+            Grid.Column="1" Grid.Row="2"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin=" 0 35 75 45"
+            FontSize="20"
+            FontWeight="Black"
+            />
+        <TextBox x:Name="LoginTB"
                  TextAlignment="Left"
                  FontSize="21"
                  Grid.Column="1" Grid.Row="2"
                  Grid.ColumnSpan="3"
                  Height="40" Width="400"
                  HorizontalAlignment="Center" VerticalAlignment="Top"
+                 Margin="30"
+                 Style="{StaticResource RoundedTextBoxStyle}"/>
+        <TextBox x:Name="PasswordTb"
+                 TextAlignment="Left"
+                 FontSize="21"
+                 Grid.Column="1" Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 Height="40" Width="400"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                 Margin="40"
                  Style="{StaticResource RoundedTextBoxStyle}"/>
     </Grid>
 </Window>
