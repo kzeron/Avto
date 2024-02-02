@@ -32,5 +32,16 @@ namespace Avto
             services.Show();
             this.Close();
         }
+
+        private void ResetPassowrdText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            new ResetPassowordWin().Show();
+            Close();
+        }
+
+        private void RegistrationText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

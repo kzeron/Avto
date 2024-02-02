@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition />
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height="10"/>
@@ -67,5 +67,21 @@
                  HorizontalAlignment="Center" VerticalAlignment="Bottom"
                  Margin="40"
                  Style="{StaticResource RoundedTextBoxStyle}"/>
+        <TextBlock x:Name="ResetPassowrdText"
+                   MouseLeftButtonDown="ResetPassowrdText_MouseLeftButtonDown"
+                   Text="Сбросить пароль"
+                   Margin="140 20 80 20"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                   Grid.Column="1" Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource HoverText}"
+                   />
+        <TextBlock x:Name="RegistrationText"
+                   Text="Регистрация"
+                   HorizontalAlignment="Center" 
+                   MouseLeftButtonDown="RegistrationText_MouseLeftButtonDown"
+                   Margin="0 65 0 165"
+                   Grid.Column="2" Grid.Row="3"
+                   Style="{StaticResource HoverText}"/>
     </Grid>
 </Window>

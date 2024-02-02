@@ -44,6 +44,7 @@
     </Style>
     <!--Кликабельный текст-->
     <Style x:Key="HoverText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="Silver"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Foreground" Value="Blue"/>

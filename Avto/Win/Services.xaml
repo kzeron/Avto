@@ -21,9 +21,6 @@
                     <GradientStop Offset="0.2" Color="WhiteSmoke"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
-            <Rectangle.Effect>
-                <BlurEffect Radius="14"/>
-            </Rectangle.Effect>
         </Rectangle>
     </Grid>
 </Window>
