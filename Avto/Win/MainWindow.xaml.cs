@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avto.Win;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,24 +11,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Avto.Win
+namespace Avto
 {
     /// <summary>
-    /// Логика взаимодействия для ResetPassowordWin.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class ResetPassowordWin : Window
+    public partial class MainWindow : Window
     {
-        public ResetPassowordWin()
+        public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            Close();
+            AdminWin adminWin = new AdminWin();
+            adminWin.Show();
+            this.Close();
         }
     }
 }
