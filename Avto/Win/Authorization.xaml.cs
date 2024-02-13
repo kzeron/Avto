@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Avto
 {
@@ -21,6 +23,13 @@ namespace Avto
     /// </summary>
     public partial class MainWindow : Window
     {
+        SqlConnection connection = new SqlConnection();
+        SqlCommand command;
+        SqlDataReader reader;
+
+        public static string Login {  get; set; }
+        public static string Password { get; set; }
+        public static string NameRole { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -28,8 +37,8 @@ namespace Avto
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            Services services = new Services();
-            services.Show();
+            MainWin main = new MainWin();
+            main.Show();
             this.Close();
         }
 

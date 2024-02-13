@@ -13,5 +13,11 @@ namespace Avto
     /// </summary>
     public partial class App : Application
     {
+        public static string ConnectionString()
+        {
+            string connectionString = ConfigurationManager.
+                    ConnectionStrings["ConnectionDB"].ConnectionString;
+            return connectionString;
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Avto.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Avto.Win
 {
     /// <summary>
-    /// Логика взаимодействия для MainWin.xaml
+    /// Логика взаимодействия для WinRegistration.xaml
     /// </summary>
-    public partial class MainWin : Window
+    public partial class WinRegistration : Window
     {
-        public MainWin()
+        public WinRegistration()
         {
             InitializeComponent();
-            UserListFrame.NavigationService.Navigate(new Pages.UserList());
         }
-        
     }
 }

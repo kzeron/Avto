@@ -33,5 +33,16 @@ namespace Avto.Properties {
                 return ((string)(this["TestBaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HONORDUTY\\SQLEXPRESS;Initial Catalog=AvtoBase;Integrated Security=Tru" +
+            "e;TrustServerCertificate=True")]
+        public string AvtoBaseConnectionString {
+            get {
+                return ((string)(this["AvtoBaseConnectionString"]));
+            }
+        }
     }
 }
