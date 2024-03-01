@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto"
         mc:Ignorable="d"
-        Title="Авторизация" Height="800" Width="1040" WindowStartupLocation="CenterScreen">
+        Title="Авторизация" Height="800" Width="1040" WindowStartupLocation="CenterScreen"
+        Background="{StaticResource MaterialDesignBackground}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -38,10 +39,12 @@
             Margin=" 0 35 80 0"
             FontSize="20"
             FontWeight="Black"
+            Foreground="White"
             />
         <TextBlock
             x:Name="PasswordText"
             Text="Пароль"
+            Foreground="White"
             Grid.Column="1" Grid.Row="2"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
