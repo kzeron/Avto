@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace Avto
 {
@@ -23,11 +24,11 @@ namespace Avto
     /// </summary>
     public partial class MainWindow : Window
     {
-        SqlConnection connection = new SqlConnection();
-        SqlCommand command;
-        SqlDataReader reader;
-
-        public static string Login {  get; set; }
+        SqlConnection sqlConnection =
+              new SqlConnection(App.ConnectionString());
+        SqlCommand sqlCommand;
+        SqlDataReader dataReader;
+        public static string Login { get; set; }
         public static string Password { get; set; }
         public static string NameRole { get; set; }
         public MainWindow()
@@ -37,11 +38,68 @@ namespace Avto
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            MainWin main = new MainWin();
-            main.Show();
-            this.Close();
-        }
+            if (string.IsNullOrEmpty(LoginTb.Text))
+            {
+                MessageBox.Show("Введите логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                LoginTb.Focus();
+            }
+            else if (string.IsNullOrEmpty(PasswordTb.Password))
+            {
+                MessageBox.Show("Введите пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                PasswordTb.Focus();
+            }
+            else
+            {
+                try
+                {
+                    sqlConnection.Open();
+                    sqlCommand = new SqlCommand("SELECT PasswordUser, NameRole FROM dbo.ViewUser " +
+                    $"WHERE [LoginUser]='{LoginTb.Text}'", sqlConnection);
+                    dataReader = sqlCommand.ExecuteReader();
+                    dataReader.Read();
 
+                    if (dataReader[0].ToString() != PasswordTb.Password)
+                    {
+                        MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        PasswordTb.Focus();
+                    }
+                    else
+                    {
+                        Login = LoginTb.Text;
+                        Password = PasswordTb.Password;
+                        NameRole = dataReader[1].ToString();
+
+                        switch (NameRole)
+                        {
+                            case "Administrator":
+                                AdminWin adminWin = new AdminWin();
+                                adminWin.Show();
+                                Close();
+                                break;
+                            case "Manager":
+                                AdminWin managerWin = new AdminWin();
+                                managerWin.Show();
+                                Close();
+                                break;
+                            case "User":
+                                MainWin mainWin = new MainWin();
+                                mainWin.Show();
+                                Close();
+                                break;
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                finally
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
         private void ResetPassowrdText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             new ResetPassowordWin().Show();

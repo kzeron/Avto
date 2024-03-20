@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-        Title="Списки"  Height="700" Width="1020" WindowStartupLocation="CenterScreen">
+      Title="Главное меню" Height="450" Width="800" 
+        Background="{StaticResource MaterialDesignDarkBackground}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -18,13 +20,77 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="2" 
+                   Grid.ColumnSpan="2"
+                   Grid.RowSpan="4"
+                   Fill="White" 
+                   
+                   />
+        <Button x:Name="HideButton"
+                Content="Свернуть"
+                Padding="Auto"
+                Width="100"
+                HorizontalAlignment="Center"
+                FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                Grid.Column="1" Grid.Row="4"
+                Background="Orange" 
+                Style="{StaticResource MaterialDesignFlatAccentButton}"/>
+        <Rectangle x:Name="TopPanel"
+                 Grid.Column="0" Grid.Row="0"
+                 Grid.ColumnSpan="8" Grid.RowSpan="2"
+                 Fill="Orange"/>
+        <TextBlock
+          x:Name="Services"
+          Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"
+          Text="Услуги"
+          
+          Style="{StaticResource WhiteText}"
+          />
+        <TextBlock
+          x:Name="Notes"
+          Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"
+          Text="Записи"
+          Style="{StaticResource WhiteText}"
+          />
+        <TextBlock
+          x:Name="Contacts"
+          Grid.Column="3" Grid.Row="0" Grid.RowSpan="2"
+          Text="Контакты"
+          Style="{StaticResource WhiteText}"
+          />
+        <TextBlock
+          x:Name="Help"
+          Grid.Column="4" Grid.Row="0" Grid.RowSpan="2"
+          Text="Помощь"
+          Style="{StaticResource WhiteText}"
+          />
+        <TextBlock
+          x:Name="ListTblock"
+          Grid.Column="5" Grid.Row="0" Grid.RowSpan="2"
+          Text="Списки"
+          Style="{StaticResource WhiteText}"
+          />
+
+        <Ellipse Fill="White"
+         Grid.Column="6" Grid.Row="1"
+               Width="28" Height="28"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image 
+             Grid.Column="6" Grid.Row="1" 
+             HorizontalAlignment="Center" VerticalAlignment="Center" 
+             Source="/Images/image_2024-02-02_13-54-55.png"/>
+        <Frame x:Name="UserListFrame"
+             NavigationUIVisibility="Hidden"
+             Grid.Column="0" Grid.ColumnSpan="8"
+             Grid.Row="2" Grid.RowSpan="5" Navigated="UserListFrame_Navigated"
+             />
+
+
     </Grid>
 </Window>

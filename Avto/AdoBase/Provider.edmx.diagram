@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="915d374227aa486aad857bbd3978fcd0" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="AvtoBaseModel.Balance" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Internet" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Modem" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Role" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Services" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Sim" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.Tariff" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.TV" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.User" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.View_1" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtoBaseModel.ViewUser" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="AvtoBaseModel.FK_User_Balance" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_Tariff_Internet" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_Tariff_Modem" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_Tariff_Sim" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_Tariff_TV" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtoBaseModel.FK_User_Tariff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

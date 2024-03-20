@@ -10,21 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Avto.Win
+namespace Avto.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AdminWin.xaml
+    /// Логика взаимодействия для TarifList.xaml
     /// </summary>
-    public partial class AdminWin : Window
+    public partial class TarifList : Page
     {
-        public AdminWin()
+        public TarifList()
         {
             InitializeComponent();
         }
 
-        private void UserListFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        private void DgListTariffsAdmin_Loaded(object sender, RoutedEventArgs e)
         {
 
         }

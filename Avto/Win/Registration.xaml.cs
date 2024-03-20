@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace Avto.Win
 {
     /// <summary>
-    /// Логика взаимодействия для AdminWin.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class AdminWin : Window
+    public partial class Registration : Window
     {
-        public AdminWin()
+        public Registration()
         {
             InitializeComponent();
-        }
-
-        private void UserListFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
         }
     }
 }

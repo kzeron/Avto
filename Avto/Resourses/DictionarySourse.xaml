@@ -36,8 +36,9 @@
     </Style>
     <!--Текст-->
     <Style x:Key="WhiteText" TargetType="TextBlock">
-        <Setter Property="FontSize" Value="24"/>
-        <Setter Property="FontWeight" Value="Black"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Bank Gothic(RUS BY LYAJKA)"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
         <Setter Property="Foreground" Value="WhiteSmoke"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>

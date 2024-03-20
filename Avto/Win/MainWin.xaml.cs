@@ -24,7 +24,6 @@ namespace Avto.Win
         public MainWin()
         {
             InitializeComponent();
-            UserListFrame.NavigationService.Navigate(new Pages.UserList());
         }
         
     }

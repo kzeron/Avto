@@ -37,6 +37,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -54,8 +60,11 @@
       <HintPath>..\packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -74,13 +83,76 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdoBase\Balance.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Internet.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Modem.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Provider.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Provider.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Provider.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Provider.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Provider.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Role.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Services.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Sim.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\sysdiagrams.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\Tariff.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\TV.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\User.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\ViewUser.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdoBase\View_1.cs">
+      <DependentUpon>Provider.tt</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ClassCB.cs" />
     <Compile Include="Classes\ClassDG.cs" />
+    <Compile Include="Pages\TarifList.xaml.cs">
+      <DependentUpon>TarifList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UserList.xaml.cs">
       <DependentUpon>UserList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Win\MainWin.xaml.cs">
       <DependentUpon>MainWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Win\ResetPassowordWin.xaml.cs">
       <DependentUpon>ResetPassowordWin.xaml</DependentUpon>
@@ -91,6 +163,10 @@
     <Compile Include="Win\WinRegistration.xaml.cs">
       <DependentUpon>WinRegistration.xaml</DependentUpon>
     </Compile>
+    <Page Include="Pages\TarifList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\UserList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +198,10 @@
       <DependentUpon>Authorization.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Win\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Win\ResetPassowordWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,6 +233,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="AdoBase\Provider.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Provider.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AdoBase\Provider.edmx.diagram">
+      <DependentUpon>Provider.edmx</DependentUpon>
+    </None>
+    <Resource Include="Fonts\Bank_Gothic_Medium%28RUS BY LYAJKA%29_0.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,9 +250,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Images\image_2024-02-02_13-54-55.png" />
+    <Content Include="AdoBase\Provider.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Provider.edmx</DependentUpon>
+      <LastGenOutput>Provider.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AdoBase\Provider.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Provider.edmx</DependentUpon>
+      <LastGenOutput>Provider.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\image_2024-02-02_13-54-55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
