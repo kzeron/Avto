@@ -23,11 +23,5 @@ namespace Avto.Win
         {
             InitializeComponent();
         }
-
-        private void Enter_Click(object sender, RoutedEventArgs e)
-        {
-            new MainWindow().Show();
-            Close();
-        }
     }
 }

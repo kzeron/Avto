@@ -28,7 +28,7 @@
         <Rectangle x:Name="TopPanel"
                   Grid.Column="0" Grid.Row="0"
                   Grid.ColumnSpan="8" Grid.RowSpan="2"
-                  Fill="Orange"/>
+                  Fill="#FFCA7712"/>
         <TextBlock
            x:Name="Services"
            Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"

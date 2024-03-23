@@ -5,67 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-        Title="ResetPassowordWin" Height="650" Width="1040" WindowStartupLocation="CenterScreen">
+        Title="ResetPassowordWin" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="10"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10"/>
-            <RowDefinition />
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition Height="10"/>
-        </Grid.RowDefinitions>
-        <Button x:Name="Enter" 
-            Style="{StaticResource RoundedButtonStyle}"
-            Content="Сбросить" Width="150" Height="50"
-            FontSize="27" FontWeight="SemiBold"
-            HorizontalAlignment="Center" VerticalAlignment="Center"
-            Grid.Column="2" Grid.Row="3"
-                Click="Enter_Click"/>
-        <TextBlock
-        x:Name="LoginText"
-        Text="Новый пароль"
-        Grid.Column="1" Grid.Row="2"
-        VerticalAlignment="Top"
-        HorizontalAlignment="Right"
-        Margin=" 0 25 80 0"
-        FontSize="20"
-        FontWeight="Black"
-        />
-        <TextBlock
-        x:Name="PasswordText"
-        Text="Повторите пароль"
-        Grid.Column="1" Grid.Row="2"
-        VerticalAlignment="Bottom"
-        HorizontalAlignment="Right"
-        Margin=" 0 35 80 25"
-        FontSize="20"
-        FontWeight="Black"
-        />
-        <TextBox x:Name="LoginTB"
-             TextAlignment="Left"
-             FontSize="21"
-             Grid.Column="1" Grid.Row="2"
-             Grid.ColumnSpan="3"
-             Height="40" Width="400"
-             HorizontalAlignment="Center" VerticalAlignment="Top"
-             Margin="20"
-             Style="{StaticResource RoundedTextBoxStyle}"/>
-        <TextBox x:Name="PasswordTb"
-             TextAlignment="Left"
-             FontSize="21"
-             Grid.Column="1" Grid.Row="2"
-             Grid.ColumnSpan="3"
-             Height="40" Width="400"
-             HorizontalAlignment="Center" VerticalAlignment="Bottom"
-             Margin="20"
-             Style="{StaticResource RoundedTextBoxStyle}"/>
-        <TextBlock x:Name="ConfermPassword"/>
+        
     </Grid>
 </Window>

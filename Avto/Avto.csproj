@@ -140,8 +140,14 @@
     <Compile Include="AdoBase\View_1.cs">
       <DependentUpon>Provider.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ClassBalance.cs" />
     <Compile Include="Classes\ClassCB.cs" />
     <Compile Include="Classes\ClassDG.cs" />
+    <Compile Include="Classes\ClassMessageBoxConferm.cs" />
+    <Compile Include="Classes\ClassMessageBoxErrors.cs" />
+    <Compile Include="Classes\ClassRole.cs" />
+    <Compile Include="Classes\ClassTariff.cs" />
+    <Compile Include="Classes\ClassUser.cs" />
     <Compile Include="Pages\TarifList.xaml.cs">
       <DependentUpon>TarifList.xaml</DependentUpon>
     </Compile>
@@ -156,9 +162,6 @@
     </Compile>
     <Compile Include="Win\ResetPassowordWin.xaml.cs">
       <DependentUpon>ResetPassowordWin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Win\Services.xaml.cs">
-      <DependentUpon>Services.xaml</DependentUpon>
     </Compile>
     <Compile Include="Win\WinRegistration.xaml.cs">
       <DependentUpon>WinRegistration.xaml</DependentUpon>
@@ -203,10 +206,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Win\ResetPassowordWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Win\Services.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

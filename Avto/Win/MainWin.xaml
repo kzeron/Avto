@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-        Title="Главное меню" Height="450" Width="800" 
+        Title="Главное меню" Height="800" Width="1500" WindowStartupLocation="CenterScreen"
         Background="{StaticResource MaterialDesignDarkBackground}"
         >
     <Grid>
@@ -52,9 +52,9 @@
             Style="{StaticResource WhiteText}"
             />
         <TextBlock
-            x:Name="Help"
+            x:Name="TariffsTB"
             Grid.Column="4" Grid.Row="0" Grid.RowSpan="2"
-            Text="Помощь"
+            Text="Тарифы"
             Style="{StaticResource WhiteText}"
             />
         <TextBlock
@@ -63,7 +63,13 @@
             Text="Списки"
             Style="{StaticResource WhiteText}"
             />
-        
+        <Rectangle x:Name="FastInternet" 
+                   RadiusX="10" RadiusY="10"
+                   Grid.Column="1" Grid.Row="2"
+                   Grid.ColumnSpan="2" Grid.RowSpan="3"
+                   Margin="30"
+                   Fill="DarkGray"/>
+
 
     </Grid>
 </Window>
