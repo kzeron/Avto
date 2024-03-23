@@ -22,6 +22,7 @@ namespace Avto.Win
         public AdminWin()
         {
             InitializeComponent();
+            UserListFrame.NavigationService.Navigate(new Pages.UserList());
         }
 
         private void UserListFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)

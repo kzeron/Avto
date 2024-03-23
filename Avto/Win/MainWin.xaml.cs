@@ -24,6 +24,7 @@ namespace Avto.Win
         public MainWin()
         {
             InitializeComponent();
+            
         }
         
     }
