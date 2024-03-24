@@ -22,6 +22,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="1"
@@ -33,15 +34,16 @@
                    Margin="30" 
                    FontFamily="Bank Gothic(RUS BY LYAJKA)"
                    />
-        <Button x:Name="Enter" 
+        <Button x:Name="Registratioon" 
                 Style="{StaticResource MaterialDesignFlatMidBgButton}"
                 Background="Orange"
                 Foreground="White"
-                Content="Войти" Width="150" Height="50"
-                FontSize="27" FontWeight="SemiBold"
+                Padding="5"
+                Content="Зарегистриоваться" Width="240" Height="60"
+                FontSize="20" FontWeight="SemiBold"
                 HorizontalAlignment="Center" VerticalAlignment="Center"
-                Grid.Column="2" Grid.Row="4" 
-                
+                Grid.Column="1" Grid.Row="5" 
+                Grid.ColumnSpan="3"
                 FontFamily="Bank Gothic(RUS BY LYAJKA)"/>
         <TextBlock
             x:Name="LoginText"
@@ -50,7 +52,7 @@
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
             Margin=" 0 35 80 30"
-            FontSize="20"
+            FontSize="16"
             FontWeight="DemiBold"
             Foreground="White" FontFamily="Bank Gothic(RUS BY LYAJKA)"
             />
@@ -62,10 +64,21 @@
             VerticalAlignment="Bottom"
             HorizontalAlignment="Right"
             Margin=" 0 30 80 40"
-            FontSize="20"
+            FontSize="16"
             FontWeight="DemiBold" FontFamily="Bank Gothic(RUS BY LYAJKA)"
             />
+        <TextBlock
+            x:Name="RepeatPassPB"
+            Text="Повторите пароль"
+            Grid.Column="1" Grid.Row="4"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin=" 0 35 80 40"
+            FontSize="16"
+            FontWeight="DemiBold"
+            Foreground="White" FontFamily="Bank Gothic(RUS BY LYAJKA)"/>
         <TextBox x:Name="LoginTb"
+                 FontFamily="Bank Gothic(RUS BY LYAJKA)"
                  TextAlignment="Center"
                  FontSize="21"
                  Grid.Column="1" Grid.Row="2"
@@ -93,19 +106,27 @@
                      Margin="40"
                      Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
                      />
-        <TextBlock x:Name="ResetPassowrdText"
-                   Text="Сбросить пароль"
-                   Margin="190 20 80 20"
-                   VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                   Grid.Column="1" Grid.Row="3"
-                   Grid.ColumnSpan="2"
+        <PasswordBox x:Name="RepeatPasswordTb"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     materialDesign:TextFieldAssist.UnderlineBrush="Orange"
+                     FontSize="21"
+                     Padding="Auto"
+                     Foreground="White"
+                     Grid.Column="1" Grid.Row="4"
+                     Grid.ColumnSpan="3"
+                     Height="50" Width="400"
+                     HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                     Margin="40"
+                     Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
+                     />
+        <TextBlock x:Name="BackAuth"
+                   Text="Авторизироваться"
+                   Margin="15 5"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Grid.Column="1" Grid.Row="1"
                    Style="{StaticResource HoverText}"
-/>
-        <TextBlock x:Name="RegistrationText"
-                   Text="Регистрация"
-                   HorizontalAlignment="Center"
-                   Margin="0 65 0 165"
-                   Grid.Column="2" Grid.Row="3"
-                   Style="{StaticResource HoverText}"/>
+                   MouseLeftButtonDown="BackAuth_MouseLeftButtonDown"
+        />
     </Grid>
 </Window>

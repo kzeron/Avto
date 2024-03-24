@@ -107,7 +107,9 @@ namespace Avto
 
         private void RegistrationText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            Registration registration = new Registration();
+            registration.Show();
+            Close();
         }
     }
 }

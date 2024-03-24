@@ -102,12 +102,13 @@
                    Grid.ColumnSpan="2"
                    Style="{StaticResource HoverText}"
 />
-        <TextBlock x:Name="RegistrationText"
+        <TextBlock x:Name="RegOpenT"
                    Text="Регистрация"
-                   HorizontalAlignment="Center" 
-                   MouseLeftButtonDown="RegistrationText_MouseLeftButtonDown"
-                   Margin="0 65 0 165"
-                   Grid.Column="2" Grid.Row="3"
-                   Style="{StaticResource HoverText}"/>
+                   Grid.Column="2" Grid.Row="4"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Margin="20"
+                   Style="{StaticResource HoverText}"
+                   MouseLeftButtonDown="RegistrationText_MouseLeftButtonDown"/>
     </Grid>
 </Window>
