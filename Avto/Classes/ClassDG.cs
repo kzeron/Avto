@@ -34,7 +34,7 @@ namespace Avto.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка", ex.Message, MessageBoxButton.OK, MessageBoxImage.Error);
+                ClassMessageBoxErrors.ShowSomesingWrong(ex);
             }
             finally
             {

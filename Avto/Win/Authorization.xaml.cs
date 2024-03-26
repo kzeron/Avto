@@ -24,7 +24,6 @@ namespace Avto
     /// </summary>
     public partial class MainWindow : Window
     {
-        Classes.ClassMessageBoxErrors errorsInfo;
         SqlConnection sqlConnection =
               new SqlConnection(App.ConnectionString());
         SqlCommand sqlCommand;
@@ -41,11 +40,11 @@ namespace Avto
         {
             if (string.IsNullOrEmpty(LoginTb.Text))
             {
-                errorsInfo.ShowEmptyFieldError("логин");
+                Classes.ClassMessageBoxErrors.ShowEmptyFieldError("логин");
             }
             else if (string.IsNullOrEmpty(PasswordTb.Password))
             {
-                errorsInfo.ShowEmptyFieldError("Пароль");
+                Classes.ClassMessageBoxErrors.ShowEmptyFieldError("Пароль");
             }
             else
             {

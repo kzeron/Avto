@@ -78,6 +78,7 @@
                  Margin="90 30"
                  materialDesign:TextFieldAssist.UnderlineBrush="Orange"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 CaretBrush="White"
                  Foreground="White"/>
         <PasswordBox x:Name="PasswordTb"
                      HorizontalContentAlignment="Center"
@@ -86,6 +87,7 @@
                      FontSize="21"
                      Padding="Auto"
                      Foreground="White"
+                     CaretBrush="White"
                      Grid.Column="1" Grid.Row="3"
                      Grid.ColumnSpan="3"
                      Height="50" Width="400"
