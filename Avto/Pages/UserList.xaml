@@ -20,7 +20,6 @@
                 <DataGridTextColumn Header="Роль"
                                     Binding="{Binding NameRole}"/>
 
-
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

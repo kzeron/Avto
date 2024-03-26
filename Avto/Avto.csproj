@@ -140,18 +140,21 @@
     <Compile Include="AdoBase\View_1.cs">
       <DependentUpon>Provider.tt</DependentUpon>
     </Compile>
-    <Compile Include="Classes\ClassBalance.cs" />
-    <Compile Include="Classes\ClassCB.cs" />
-    <Compile Include="Classes\ClassDG.cs" />
+    <Compile Include="Classes\SqlClasses\ClassBalance.cs" />
+    <Compile Include="Classes\SqlClasses\ClassCB.cs" />
+    <Compile Include="Classes\SqlClasses\ClassDG.cs" />
     <Compile Include="Classes\ClassMessageBoxErrors.cs" />
-    <Compile Include="Classes\ClassRole.cs" />
-    <Compile Include="Classes\ClassTariff.cs" />
-    <Compile Include="Classes\ClassUser.cs" />
+    <Compile Include="Classes\SqlClasses\ClassRole.cs" />
+    <Compile Include="Classes\SqlClasses\ClassTariff.cs" />
+    <Compile Include="Classes\SqlClasses\ClassUser.cs" />
     <Compile Include="Pages\TarifList.xaml.cs">
       <DependentUpon>TarifList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\UserList.xaml.cs">
       <DependentUpon>UserList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win\AddUserWin.xaml.cs">
+      <DependentUpon>AddUserWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Win\MainWin.xaml.cs">
       <DependentUpon>MainWin.xaml</DependentUpon>
@@ -162,9 +165,6 @@
     <Compile Include="Win\ResetPassowordWin.xaml.cs">
       <DependentUpon>ResetPassowordWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Win\WinRegistration.xaml.cs">
-      <DependentUpon>WinRegistration.xaml</DependentUpon>
-    </Compile>
     <Page Include="Pages\TarifList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resourses\DictionarySourse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Win\AddUserWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -205,10 +209,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Win\ResetPassowordWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Win\WinRegistration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -259,6 +259,7 @@
       <DependentUpon>Provider.edmx</DependentUpon>
       <LastGenOutput>Provider.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\image_2024-02-02_13-54-55.png">
@@ -268,9 +269,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\SqlClasses\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -23,5 +23,12 @@ namespace Avto.Win
         {
             InitializeComponent();
         }
+
+        private void BackAuth_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow auth = new MainWindow();
+            auth.Show();
+            Close();
+        }
     }
 }

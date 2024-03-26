@@ -3,10 +3,135 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-        Title="ResetPassowordWin" Height="450" Width="800">
+      Title="Регистрация" Height="600" Width="800" WindowStartupLocation="CenterScreen"
+      Background="{StaticResource MaterialDesignDarkBackground}">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1"
+                 Grid.ColumnSpan="3"
+                 Text="Сброс пароля" VerticalAlignment="Bottom"
+                 HorizontalAlignment="Center" 
+                 Foreground="WhiteSmoke"
+                 FontSize="35"
+                 Margin="30" 
+                 FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                 />
+        <Button x:Name="ResetBt" 
+              Style="{StaticResource MaterialDesignFlatMidBgButton}"
+              Background="Orange"
+              Foreground="White"
+              Padding="5"
+              Content="Сбросить" Width="120" Height="45"
+              FontSize="20" FontWeight="SemiBold"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Grid.Column="1" Grid.Row="5" 
+              Grid.ColumnSpan="3"
+              FontFamily="Bank Gothic(RUS BY LYAJKA)"
+              />
+        <TextBlock
+          x:Name="LoginText"
+          Text="Логин"
+          Foreground="White"
+          Grid.Column="1" Grid.Row="2"
+          VerticalAlignment="Bottom"
+          HorizontalAlignment="Right"
+          Margin=" 0 30 80 40"
+          FontSize="16"
+          FontWeight="DemiBold" FontFamily="Bank Gothic(RUS BY LYAJKA)"
+          />
+        <TextBlock
+          x:Name="PasswordText"
+          Text="Пароль"
+          Foreground="White"
+          Grid.Column="1" Grid.Row="3"
+          VerticalAlignment="Bottom"
+          HorizontalAlignment="Right"
+          Margin=" 0 30 80 40"
+          FontSize="16"
+          FontWeight="DemiBold" FontFamily="Bank Gothic(RUS BY LYAJKA)"
+          />
+        <TextBlock
+            x:Name="RepeatPassPB"
+            Text="Повторите пароль"
+            Grid.Column="1" Grid.Row="4"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin=" 0 35 80 40"
+            FontSize="16"
+            FontWeight="DemiBold"
+            Foreground="White" FontFamily="Bank Gothic(RUS BY LYAJKA)"
+            />
+        <TextBox x:Name="LoginTb"
+                 FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                 TextAlignment="Center"
+                 FontSize="21"
+                 Grid.Column="1" Grid.Row="2"
+                 Grid.ColumnSpan="3"
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Padding="Auto"
+                 Height="50" Width="400"
+                 HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                 Margin="90 30"
+                 materialDesign:TextFieldAssist.UnderlineBrush="Orange"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Foreground="White"
+                 CaretBrush="White"
+                 />
+        <PasswordBox x:Name="PasswordTb"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     materialDesign:TextFieldAssist.UnderlineBrush="Orange"
+                     FontSize="21"
+                     Padding="Auto"
+                     Foreground="White"
+                     CaretBrush="White"
+                     Grid.Column="1" Grid.Row="3"
+                     Grid.ColumnSpan="3"
+                     Height="50" Width="400"
+                     HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                     Margin="40"
+                     Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
+                   />
+        <PasswordBox x:Name="RepeatPasswordTb"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   materialDesign:TextFieldAssist.UnderlineBrush="Orange"
+                   FontSize="21"
+                   Padding="Auto"
+                   Foreground="White"
+                   CaretBrush="White"
+                   Grid.Column="1" Grid.Row="4"
+                   Grid.ColumnSpan="3"
+                   Height="50" Width="400"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                   Margin="40"
+                   Style="{StaticResource MaterialDesignFloatingHintRevealPasswordBox}"
+                   />
+        <TextBlock x:Name="BackAuth"
+                   Text="Авторизироваться"
+                   Margin="15 5"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   Grid.Column="1" Grid.Row="1"
+                   Style="{StaticResource HoverText}"
+                   MouseLeftButtonDown="BackAuth_MouseLeftButtonDown"/>
     </Grid>
 </Window>

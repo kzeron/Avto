@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-         Title="Регистрация" Height="600" Width="800" WindowStartupLocation="CenterScreen"
+        Title="Регистрация" Height="600" Width="800" WindowStartupLocation="CenterScreen"
         Background="{StaticResource MaterialDesignDarkBackground}">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -92,6 +92,7 @@
                  Margin="90 30"
                  materialDesign:TextFieldAssist.UnderlineBrush="Orange"
                  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 CaretBrush="White"
                  Foreground="White"/>
         <PasswordBox x:Name="PasswordTb"
                      HorizontalContentAlignment="Center"
@@ -100,6 +101,7 @@
                      FontSize="21"
                      Padding="Auto"
                      Foreground="White"
+                     CaretBrush="White"
                      Grid.Column="1" Grid.Row="3"
                      Grid.ColumnSpan="3"
                      Height="50" Width="400"
@@ -114,6 +116,7 @@
                      FontSize="21"
                      Padding="Auto"
                      Foreground="White"
+                     CaretBrush="White"
                      Grid.Column="1" Grid.Row="4"
                      Grid.ColumnSpan="3"
                      Height="50" Width="400"

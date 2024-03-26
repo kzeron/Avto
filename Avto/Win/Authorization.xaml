@@ -24,6 +24,13 @@
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+        <Image x:Name="LogoIm"
+               Grid.Row="1" Grid.Column="1"
+               VerticalAlignment="Top" 
+               HorizontalAlignment="Left" 
+               Source="/Images/logo.png"
+               Width="50" Height="50"
+               Margin="20 10"/>
         <TextBlock Grid.Row="1" Grid.Column="1"
                    Grid.ColumnSpan="3"
                    Text="Авторизация" VerticalAlignment="Bottom"
