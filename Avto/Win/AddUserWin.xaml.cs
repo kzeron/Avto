@@ -1,5 +1,4 @@
-﻿using Avto.AdoBase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -33,7 +32,7 @@ namespace Avto.Win
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            new WinLists.WinListUsers().Show();
+            new AdminWin().Show();
             Close();
         }
 
@@ -46,13 +45,13 @@ namespace Avto.Win
         {
             if (string.IsNullOrEmpty(TbLogin.Text))
             {
-                MessageBox.Show("Введите логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                TbLogin.Focus();
+                Classes.ClassMessageBoxErrors
+                    .ShowEmptyFieldError("Логин");
             }
             else if (string.IsNullOrEmpty(TbPassword.Text))
             {
-                MessageBox.Show("Введите пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                TbPassword.Focus();
+                Classes.ClassMessageBoxErrors
+                    .ShowEmptyFieldError("Пароль"); 
             }
             else if (CbRole.SelectedValue.ToString() == "")
             {
@@ -68,12 +67,12 @@ namespace Avto.Win
                     sqlCommand = new SqlCommand("Insert into dbo.[User] " +
                         "(Login, Password, IdRole) " +
                         "Values " +
-                        "(@Login, " +
+                        "(@LoginUser, " +
                         "@Password, " +
                         "@IdRole)", sqlConnection);
 
-                    sqlCommand.Parameters.AddWithValue("Login", TbLogin.Text);
-                    sqlCommand.Parameters.AddWithValue("Password", TbPassword.Text);
+                    sqlCommand.Parameters.AddWithValue("LoginUser", TbLogin.Text);
+                    sqlCommand.Parameters.AddWithValue("PasswordUser", TbPassword.Text);
                     sqlCommand.Parameters.AddWithValue("IdRole", IdRole);
                     sqlCommand.ExecuteNonQuery();
 
@@ -89,5 +88,6 @@ namespace Avto.Win
                 }
             }
         }
+       
     }
 }

@@ -30,5 +30,10 @@ namespace Avto.Win
             auth.Show();
             Close();
         }
+
+        private void ResetBt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

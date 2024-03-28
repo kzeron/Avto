@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto.Win"
         mc:Ignorable="d"
-        Title="AddUserWin" Height="450" Width="800">
+        Title="AddUserWin" Height="640" Width="490"
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource MaterialDesignWindow}"
+        Background="{StaticResource MaterialDesignDarkBackground}"
+        >
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Добавление пользователей"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="28"
+                   FontWeight="ExtraLight"
+                   Grid.ColumnSpan="2"
+                   Foreground="White"
+                   FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                   />
+
+        <Button x:Name="BtnBack" Content="Назад"
+                Background="Orange"
+                Opacity="0.7"
+                Height="52" 
+                VerticalAlignment="Bottom"
+                Margin="20 15"
+                Grid.Row="4"
+                BorderThickness="2" Click="BtnBack_Click"/>
+
+        <TextBlock x:Name="TblLogin" Text="Логин:" Grid.Row="1" 
+                   Foreground="White"
+                   FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                   HorizontalAlignment="Right"
+                   FontSize="27" VerticalAlignment="Center"/>
+        <TextBox x:Name="TbLogin" 
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="25 45"/>
+
+        <TextBlock x:Name="TblPassword" Text="Пароль:" Grid.Row="2"
+                   Foreground="White"
+                   FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                   HorizontalAlignment="Right"
+                   FontSize="27" VerticalAlignment="Center"/>
+        <TextBox x:Name="TbPassword" Grid.Row="2" Grid.Column="1" Margin="25 45"/>
+
+        <TextBlock x:Name="TblRole" Text="Роль:" Grid.Row="3" 
+                   Foreground="White"
+                   FontFamily="Bank Gothic(RUS BY LYAJKA)"
+                   HorizontalAlignment="Right"
+                   FontSize="27" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CbRole" Grid.Row="3" Grid.Column="1" Margin="25"
+                  Loaded="CbRole_Loaded"/>
+        <Button x:Name="BtnAdd" Content="Добавить" Click="BtnAdd_Click"
+            Background="Orange" Height="52" VerticalAlignment="Bottom"
+                Margin="77,0,77,17" Grid.Row="4" Grid.Column="1"/>
+
     </Grid>
 </Window>

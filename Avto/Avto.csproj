@@ -83,63 +83,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdoBase\Balance.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Internet.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Modem.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Provider.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Provider.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Provider.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Provider.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Provider.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Role.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Services.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Sim.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\sysdiagrams.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\Tariff.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\TV.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\User.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\ViewUser.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AdoBase\View_1.cs">
-      <DependentUpon>Provider.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\SqlClasses\ClassBalance.cs" />
     <Compile Include="Classes\SqlClasses\ClassCB.cs" />
     <Compile Include="Classes\SqlClasses\ClassDG.cs" />
@@ -231,13 +174,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AdoBase\Provider.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Provider.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="AdoBase\Provider.edmx.diagram">
-      <DependentUpon>Provider.edmx</DependentUpon>
-    </None>
     <Resource Include="Fonts\Bank_Gothic_Medium%28RUS BY LYAJKA%29_0.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -249,16 +185,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdoBase\Provider.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Provider.edmx</DependentUpon>
-      <LastGenOutput>Provider.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AdoBase\Provider.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Provider.edmx</DependentUpon>
-      <LastGenOutput>Provider.cs</LastGenOutput>
-    </Content>
     <Resource Include="Images\logo.png" />
   </ItemGroup>
   <ItemGroup>

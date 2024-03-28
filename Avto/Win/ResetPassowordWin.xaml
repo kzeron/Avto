@@ -44,6 +44,7 @@
               HorizontalAlignment="Center" VerticalAlignment="Center"
               Grid.Column="1" Grid.Row="5" 
               Grid.ColumnSpan="3"
+                Click="ResetBt_Click"
               FontFamily="Bank Gothic(RUS BY LYAJKA)"
               />
         <TextBlock
@@ -129,8 +130,8 @@
         <TextBlock x:Name="BackAuth"
                    Text="Авторизироваться"
                    Margin="15 5"
-                   VerticalAlignment="Top" HorizontalAlignment="Left"
-                   Grid.Column="1" Grid.Row="1"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                   Grid.Column="1" Grid.Row="5"
                    Style="{StaticResource HoverText}"
                    MouseLeftButtonDown="BackAuth_MouseLeftButtonDown"/>
     </Grid>

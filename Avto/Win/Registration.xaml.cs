@@ -65,20 +65,20 @@ namespace Avto.Win
                         "(LoginUser, " +
                         "PasswordUser, " +
                         "IdRole, " +
-                        "IdBalance, " +
+                        "Balance, " +
                         "IdTariff, IdServices) " +
                         "Values " +
                         "(@LoginUser, " +
                         "@PasswordUser, " +
                         "@IdRole, " +
-                        "@IdBalance, " +
+                        "@Balance, " +
                         "@IdTariff, " +
                         "@IdServices)", _sqlconnection);
                     _sqlCommand.Parameters.AddWithValue("LoginUser", LoginTb.Text);
                     _sqlCommand.Parameters.AddWithValue ("PasswordUser", PasswordTb.Password);
-                    _sqlCommand.Parameters.AddWithValue("IdRole", 1);
-                    _sqlCommand.Parameters.AddWithValue("IdBalance", 1);
-                    _sqlCommand.Parameters.AddWithValue("IdTariff", 1);
+                    _sqlCommand.Parameters.AddWithValue("IdRole", 2);
+                    _sqlCommand.Parameters.AddWithValue("Balance", 0);
+                    _sqlCommand.Parameters.AddWithValue("IdTariff", 9);
                     _sqlCommand.Parameters.AddWithValue("IdServices", 1);
                     _sqlCommand.ExecuteNonQuery();
                     Classes.ClassMessageBoxErrors.AddSqlList();

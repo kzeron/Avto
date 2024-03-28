@@ -58,8 +58,7 @@ namespace Avto
 
                     if (dataReader[0].ToString() != PasswordTb.Password)
                     {
-                        MessageBox.Show("Неверный логин или пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                        PasswordTb.Focus();
+                        Classes.ClassMessageBoxErrors.ShowAuthorizationError();
                     }
                     else
                     {

@@ -6,8 +6,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Avto"
         mc:Ignorable="d"
-        Title="Авторизация" Height="600" Width="800" WindowStartupLocation="CenterScreen"
-        Background="{StaticResource MaterialDesignDarkBackground}">
+        Title="Авторизация" Height="600" Width="800" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Style="{DynamicResource MaterialDesignWindow}"
+        Background="{StaticResource MaterialDesignDarkBackground}" 
+        Icon="/Images/logo.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
